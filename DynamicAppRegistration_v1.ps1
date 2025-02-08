@@ -31,7 +31,7 @@ $GraphServicePrincipal = Get-MgServicePrincipal -Filter "appId eq '00000003-0000
 $GraphResourceId = $GraphServicePrincipal.Id
 
 # Connect to Microsoft Graph
-#Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.ReadWrite.All -NoWelcome
+Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.ReadWrite.All -NoWelcome
 
 # Function to dynamically generate requiredResourceAccess object
 function New-GraphPermissionObject {
@@ -113,7 +113,7 @@ foreach ($access in $requiredResourceAccess.resourceAccess) {
 }
 
 # Step 6: Connect to Exchange Online
-#Connect-ExchangeOnline -Organization $TenantId
+Connect-ExchangeOnline -Organization $TenantId
 
 # Step 7: Create or update Security Group
 $AccessGroupName = "MailDaemonAccessGroup"
