@@ -14,7 +14,7 @@ It dynamically assigns Microsoft Graph API permissions and enforces access polic
 Erik Hüttmeyer - m365blog.com
 
 .VERSION
-3.0
+1.0
 
 .NOTES
 Ensure you have the necessary permissions before running this script:
